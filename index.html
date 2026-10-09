@@ -27,134 +27,188 @@
  "alumniOf":[{"@type":"CollegeOrUniversity","name":"University of Notre Dame - Mendoza College of Business"},{"@type":"CollegeOrUniversity","name":"University of Illinois Chicago"}],
  "sameAs":["https://www.linkedin.com/in/timbrunke/"]}
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%230f1f33%22/%3E%3Crect x=%224%22 y=%2211%22 width=%228%22 height=%221.5%22 fill=%22%23c3a26a%22/%3E%3C/svg%3E">
 <style>
-body{font-family:-apple-system,Segoe UI,Arial,sans-serif;color:#1a1a1a;background:#f4f5f7;margin:0;line-height:1.5}
-main{max-width:820px;margin:32px auto;background:#fff;padding:40px 48px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-h1{font-size:2rem;margin:0 0 2px}
-.head{font-size:1.25rem;font-weight:700;color:#1f3a5f;margin:2px 0 8px}
-.promise{font-size:1.05rem;color:#333;margin:0 0 12px}
-.meta{color:#444;font-size:.95rem}
-.open{background:#eef1f5;border-left:4px solid #1f3a5f;padding:10px 14px;margin:16px 0 4px;border-radius:4px;font-size:.98rem}
-.open b{color:#1f3a5f}
-h2{font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid #1f3a5f;color:#1f3a5f;padding-bottom:3px;margin:30px 0 12px}
-a{color:#1f3a5f}
-.btn{display:inline-block;background:#1f3a5f;color:#fff;text-decoration:none;padding:9px 16px;border-radius:6px;margin:10px 8px 0 0;font-weight:600}
-.btn.alt{background:#fff;color:#1f3a5f;border:1px solid #1f3a5f}
-.case{border:1px solid #d5dce6;border-radius:8px;padding:16px 18px;margin:0 0 14px}
-.case h3{margin:0;font-size:1.05rem}
-.case .who{color:#4a6a91;font-weight:600;font-size:.92rem;margin:2px 0 8px}
-.case p{margin:6px 0}
-.lbl{font-weight:700;color:#1f3a5f;margin-right:6px}
-.kpis{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
-.kpi{background:#1f3a5f;color:#fff;border-radius:6px;padding:6px 10px;font-size:.88rem}
-.kpi b{font-size:1.05rem;margin-right:4px}
-.job{margin:0 0 16px}
-.job .co{font-weight:700}
-.job .dt{color:#555;font-weight:400}
-.job .t{font-style:italic;color:#333}
-.job ul{margin:4px 0 0;padding-left:20px}
-.job li{margin:2px 0}
-.eng{margin:8px 0 0 14px;padding-left:12px;border-left:3px solid #d5dce6}
-.fill{background:#fff3c4;border:1px dashed #b38f00;padding:1px 5px;border-radius:3px;font-weight:600;color:#5c4a00}
-.small{font-size:.92rem;color:#444}
-footer{margin-top:28px;font-size:.85rem;color:#666}
-@media(max-width:600px){main{margin:0;padding:24px 20px;border-radius:0}h1{font-size:1.7rem}.head{font-size:1.1rem}}
+:root{--navy:#0f1f33;--navy2:#162a44;--char:#1c2129;--ink:#1b1f24;--body:#3a414b;--mute:#6a727d;--line:#e3e1da;--paper:#f7f6f2;--gold:#c3a26a;--gold-d:#86672e;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--body);background:#fff;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--navy)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:8px 14px;z-index:100}.skip:focus{left:8px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.serif{font-family:"Source Serif 4",Georgia,"Times New Roman",serif}
+/* nav */
+.nav{position:sticky;top:0;z-index:60;background:rgba(15,31,51,.97);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid rgba(255,255,255,.06);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.brand{color:#fff;text-decoration:none;font-family:"Source Serif 4",Georgia,serif;font-size:1.2rem;font-weight:600;letter-spacing:.01em}
+.brand span{display:inline-block;width:18px;height:2px;background:var(--gold);vertical-align:middle;margin-right:10px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{color:#c9d1dc;text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.04em}
+.nav ul a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:.9rem;padding:12px 20px;border-radius:3px;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn-gold{background:var(--gold);color:#13202f}.btn-gold:hover{background:#d4b47c}
+.btn-line{border:1px solid rgba(255,255,255,.35);color:#fff}.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.btn-dark{background:var(--navy);color:#fff}.btn-dark:hover{background:var(--navy2)}
+.btn-ghost{border:1px solid var(--navy);color:var(--navy)}.btn-ghost:hover{background:var(--navy);color:#fff}
+.nav .btn{padding:9px 16px;font-size:.84rem}
+/* hero */
+.hero{background:radial-gradient(1200px 500px at 85% -10%,rgba(195,162,106,.16),transparent 60%),linear-gradient(160deg,var(--navy) 0%,#0b1726 100%);color:#fff;padding:clamp(72px,10vw,128px) 0 clamp(120px,14vw,170px);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:linear-gradient(90deg,transparent,rgba(195,162,106,.5),transparent)}
+.hero h1{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.04;margin:0;letter-spacing:-.01em}
+.eyebrow{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin:22px 0 0}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+.promise{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(1.25rem,2.3vw,1.7rem);line-height:1.45;color:#e8ecf1;max-width:860px;margin:26px 0 0;font-weight:400}
+.hero .meta{color:#a9b4c2;font-size:.92rem;margin-top:26px}
+.hero .meta a{color:#dfe5ec}
+.open{display:inline-block;margin-top:22px;padding:12px 18px;border:1px solid rgba(195,162,106,.4);border-radius:3px;background:rgba(255,255,255,.03);font-size:.95rem;color:#dfe5ec}
+.open b{color:var(--gold);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+/* stats */
+.stats{margin-top:-82px;position:relative;z-index:2}
+.stats .grid{display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border-radius:4px;box-shadow:0 18px 50px rgba(15,31,51,.14);overflow:hidden}
+.stat{padding:30px 28px;border-right:1px solid var(--line);position:relative}
+.stat:last-child{border-right:0}
+.stat::before{content:"";position:absolute;top:0;left:28px;width:28px;height:3px;background:var(--gold)}
+.stat b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;color:var(--navy);line-height:1.05}
+.stat span{display:block;margin-top:8px;font-size:.9rem;color:var(--mute);line-height:1.4}
+/* sections */
+section.s{padding:clamp(72px,9vw,112px) 0}
+.kicker{color:var(--gold-d);font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px}
+h2.t{font-family:"Source Serif 4",Georgia,serif;font-weight:600;color:var(--ink);font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.15;margin:0 0 40px;letter-spacing:-.005em}
+/* case studies */
+.cases{display:grid;gap:28px}
+.case{background:#fff;border:1px solid var(--line);border-radius:4px;padding:clamp(24px,3.4vw,40px);position:relative;transition:box-shadow .35s var(--ease),transform .35s var(--ease),border-color .35s}
+.case:hover{box-shadow:0 18px 44px rgba(15,31,51,.10);transform:translateY(-2px);border-color:#d6d2c6}
+.case .no{position:absolute;top:clamp(22px,3.2vw,38px);right:clamp(24px,3.4vw,40px);font-family:"Source Serif 4",Georgia,serif;font-size:2.4rem;color:#e7e2d6;line-height:1}
+.case h3{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(1.3rem,2.2vw,1.6rem);font-weight:600;color:var(--ink);margin:0 64px 6px 0;line-height:1.25}
+.case .who{color:var(--gold-d);font-weight:600;font-size:.9rem;margin:0 0 22px}
+.par{display:grid;grid-template-columns:110px 1fr;gap:10px 24px;border-top:1px solid var(--line);padding-top:20px}
+.par .lbl{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);padding-top:3px}
+.par p{margin:0 0 6px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;margin-top:24px;overflow:hidden}
+.kpi{background:var(--paper);padding:16px 18px;font-size:.88rem;color:var(--mute);line-height:1.35}
+.kpi b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:1.65rem;color:var(--navy);font-weight:600;margin-bottom:2px}
+/* current work */
+.dark{background:linear-gradient(180deg,var(--char),#151a21);color:#d6dce4}
+.dark h2.t{color:#fff}
+.dark .kicker{color:var(--gold)}
+.dark .who{color:var(--gold);font-weight:600;margin:-24px 0 28px}
+.bullets{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px}
+.bullets li{position:relative;padding:18px 0 0 0;border-top:1px solid rgba(255,255,255,.12)}
+.bullets li::before{content:"";position:absolute;top:-1px;left:0;width:36px;height:2px;background:var(--gold)}
+/* expertise */
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:8px 16px;font-size:.9rem;color:var(--ink)}
+/* timeline */
+.tl{position:relative;margin:0;padding:0;list-style:none}
+.tl::before{content:"";position:absolute;left:220px;top:6px;bottom:6px;width:1px;background:var(--line)}
+.tl>li{display:grid;grid-template-columns:220px 1fr;gap:0 44px;padding:0 0 40px;position:relative}
+.tl>li::after{content:"";position:absolute;left:215px;top:7px;width:11px;height:11px;border-radius:50%;background:#fff;border:2px solid var(--gold)}
+.tl .when{text-align:right;padding-right:28px;font-size:.86rem;color:var(--mute);line-height:1.45}
+.tl .when b{display:block;color:var(--navy);font-weight:600;font-size:.9rem}
+.tl .what{padding-left:0}
+.tl .co{font-weight:700;color:var(--ink);font-size:1.05rem}
+.tl .ttl{font-family:"Source Serif 4",Georgia,serif;font-style:italic;color:var(--body);font-size:1.05rem;margin:2px 0 8px}
+.tl ul{margin:6px 0 0;padding-left:18px}.tl li li{margin:4px 0}
+.tl .small{font-size:.92rem;color:var(--mute)}
+.eng{margin:16px 0 0;padding:16px 18px;background:var(--paper);border-left:2px solid var(--gold);border-radius:0 3px 3px 0}
+/* education */
+.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.edu div{border-top:2px solid var(--navy);padding-top:14px;color:var(--ink);font-weight:500}
+/* contact */
+.contact{background:linear-gradient(160deg,var(--navy),#0b1726);color:#dfe5ec;text-align:center}
+.contact h2.t{color:#fff;margin-bottom:16px}
+.contact p{max-width:640px;margin:0 auto;font-size:1.1rem}
+.contact .cta{justify-content:center}
+footer{background:#0b1726;color:#7f8b99;font-size:.85rem;padding:24px 0;border-top:1px solid rgba(255,255,255,.06)}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+@media(max-width:960px){.nav ul{display:none}.stats .grid{grid-template-columns:1fr 1fr}.stat:nth-child(2n){border-right:0}.stat:nth-child(-n+4){border-bottom:1px solid var(--line)}.stat:nth-child(5){grid-column:1/-1;border-right:0}.bullets{grid-template-columns:1fr}
+.tl::before{left:6px}.tl>li{grid-template-columns:1fr;padding-left:32px}.tl>li::after{left:1px}.tl .when{text-align:left;padding:0 0 6px}}
+@media(max-width:620px){.par{grid-template-columns:1fr;gap:2px}.par .lbl{padding-top:10px}.kpis{grid-template-columns:1fr}.edu{grid-template-columns:1fr}.stat{padding:24px 20px}.stat::before{left:20px}.case .no{display:none}.case h3{margin-right:0}.brand{font-size:1.05rem}}
 </style>
 </head>
-<body><main>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="#top"><span aria-hidden="true"></span>Tim Brunke</a>
+<nav aria-label="Sections"><ul>
+<li><a href="#case-studies">Case studies</a></li><li><a href="#current">Current work</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li>
+</ul></nav>
+<a class="btn btn-gold" href="mailto:tim.brunke@me.com?subject=Hello%20Tim">Contact Tim</a>
+</div></header>
 
-<header>
-<h1>Tim Brunke</h1>
-<div class="head">VP Operations and Supply Chain Transformation</div>
-<p class="promise">I turn supply chains, systems and operating rhythms into measurable P&amp;L results: $100M in capital spending cut, a 57% lift in key supply chain metrics, and a 30% annual profit increase from global S&amp;OP.</p>
-<div class="meta">Elmhurst, IL (Chicago area) &middot; <a href="https://www.linkedin.com/in/timbrunke/">linkedin.com/in/timbrunke</a> &middot; Six Sigma Master Black Belt &middot; Notre Dame MBA</div>
-<div class="open"><b>Open to:</b> VP Operations / Supply Chain &middot; Interim or Fractional COO &middot; Private equity operating projects</div>
-<p>
-<a class="btn" href="mailto:tim.brunke@me.com?subject=Hello%20Tim">Contact Tim</a>
-<a class="btn alt" href="Tim_Brunke_Resume.pdf" download>Resume (PDF)</a>
-<a class="btn alt" href="Tim_Brunke_Project_Summaries.pdf" download>Project summaries (PDF)</a>
-<a class="btn alt" href="https://www.linkedin.com/in/timbrunke/">LinkedIn</a>
-</p>
-</header>
-
-<section id="case-studies">
-<h2>Selected case studies</h2>
-
-<div class="case">
-<h3>Global ERP, CRM and banking systems for a PE exit</h3>
-<div class="who">Siprocal (contract) &middot; Vice President, Operations &middot; 2021&ndash;2024</div>
-<p><span class="lbl">Problem</span> A PE-backed, multi-entity digital marketing technology company growing across North and South America had no single system of record for finance and go-to-market data. That slowed exit readiness and left heavy bank reconciliation work and forecast blind spots across US and LATAM entities.</p>
-<p><span class="lbl">Action</span> As ERP program leader, installed a 90-day Run-the-Business / CPFR process first, then implemented NetSuite ERP and HubSpot CRM as the global system of record with NetSuite, LatamReady and Deloitte Tax partners, integrated bank partners through Kyriba, and built a real-time forecast and KPI dashboard for leadership.</p>
-<p><span class="lbl">Result</span> One global system of record supporting PE exit readiness, about 50% less banking reconciliation effort, and real-time forecast and KPI visibility for the $40M business.</p>
-<div class="kpis"><span class="kpi"><b>50%</b>less reconciliation effort</span><span class="kpi"><b>$40M</b>business on one dashboard</span><span class="kpi"><b>90-day</b>process install before ERP</span></div>
+<main id="main">
+<section class="hero" id="top"><div class="wrap">
+<h1 class="rv">Tim Brunke</h1>
+<p class="eyebrow rv">VP Operations and Supply Chain Transformation</p>
+<p class="promise rv">I turn supply chains, systems and operating rhythms into measurable P&amp;L results: $100M in capital spending cut, a 57% lift in key supply chain metrics, and a 30% annual profit increase from global S&amp;OP.</p>
+<div class="meta rv">Elmhurst, IL (Chicago area) &middot; <a href="https://www.linkedin.com/in/timbrunke/">linkedin.com/in/timbrunke</a> &middot; Six Sigma Master Black Belt &middot; Notre Dame MBA</div>
+<div class="open rv"><b>Open to:</b> VP Operations / Supply Chain &middot; Interim or Fractional COO &middot; Private equity operating projects</div>
+<div class="cta rv">
+<a class="btn btn-gold" href="mailto:tim.brunke@me.com?subject=Hello%20Tim">Contact Tim</a>
+<a class="btn btn-line" href="Tim_Brunke_Resume.pdf" download>Resume (PDF)</a>
+<a class="btn btn-line" href="Tim_Brunke_Project_Summaries.pdf" download>Project summaries (PDF)</a>
+<a class="btn btn-line" href="https://www.linkedin.com/in/timbrunke/">LinkedIn</a>
 </div>
+</div></section>
 
-<div class="case">
-<h3>Post-bankruptcy supply chain rebuild for a national retailer</h3>
-<div class="who">Standard General (private equity), RadioShack &middot; Vice President, Supply Chain Operations &middot; 2015&ndash;2016</div>
-<p><span class="lbl">Problem</span> A PE-owned retailer emerging from bankruptcy needed a supply chain that could support national retail without the cost and service failures of the prior model. Asian vendor, inventory and store-fulfillment complexity threatened in-stock levels and working capital.</p>
-<p><span class="lbl">Action</span> Led a 150-person supply chain organization (3PL management, forecasting, demand planning, purchasing, international logistics, replenishment) managing $30M in cost and $500M+ in purchases. Ran a cost analysis and outsourced supply chain functions, redesigned store pack-ship logic for a 95%+ store in-stock design, and renegotiated contracts with about 74 Asian vendors.</p>
-<p><span class="lbl">Result</span> $5M lower annual supply chain cost, a 57% improvement in key supply chain metrics (forecast accuracy, in-stock percentage, inventory turns, delivery times), and 33% faster order fulfillment.</p>
-<div class="kpis"><span class="kpi"><b>$5M</b>annual cost out</span><span class="kpi"><b>57%</b>key SC metric lift</span><span class="kpi"><b>33%</b>faster fulfillment</span></div>
+<div class="stats"><div class="wrap"><div class="grid rv" role="list" aria-label="Key results">
+<div class="stat" role="listitem"><b>$100M</b><span>capital spending cut</span></div>
+<div class="stat" role="listitem"><b>57%</b><span>key SC metric lift</span></div>
+<div class="stat" role="listitem"><b>30%</b><span>annual profit increase from global S&amp;OP</span></div>
+<div class="stat" role="listitem"><b>$5M</b><span>annual cost out</span></div>
+<div class="stat" role="listitem"><b>$122M</b><span>annual savings (Leap Wireless)</span></div>
+</div></div></div>
+
+<section class="s" id="case-studies"><div class="wrap">
+<p class="kicker rv">01</p>
+<h2 class="t rv">Selected case studies</h2>
+<div class="cases">
+<article class="case rv"><div class="no" aria-hidden="true">01</div><h3>Global ERP, CRM and banking systems for a PE exit</h3><div class="who">Siprocal (contract) &middot; Vice President, Operations &middot; 2021&ndash;2024</div><div class="par"><div class="lbl">Problem</div><p>A PE-backed, multi-entity digital marketing technology company growing across North and South America had no single system of record for finance and go-to-market data. That slowed exit readiness and left heavy bank reconciliation work and forecast blind spots across US and LATAM entities.</p><div class="lbl">Action</div><p>As ERP program leader, installed a 90-day Run-the-Business / CPFR process first, then implemented NetSuite ERP and HubSpot CRM as the global system of record with NetSuite, LatamReady and Deloitte Tax partners, integrated bank partners through Kyriba, and built a real-time forecast and KPI dashboard for leadership.</p><div class="lbl">Result</div><p>One global system of record supporting PE exit readiness, about 50% less banking reconciliation effort, and real-time forecast and KPI visibility for the $40M business.</p></div><div class="kpis"><div class="kpi"><b>50%</b>less reconciliation effort</div><div class="kpi"><b>$40M</b>business on one dashboard</div><div class="kpi"><b>90-day</b>process install before ERP</div></div></article>
+<article class="case rv"><div class="no" aria-hidden="true">02</div><h3>Post-bankruptcy supply chain rebuild for a national retailer</h3><div class="who">Standard General (private equity), RadioShack &middot; Vice President, Supply Chain Operations &middot; 2015&ndash;2016</div><div class="par"><div class="lbl">Problem</div><p>A PE-owned retailer emerging from bankruptcy needed a supply chain that could support national retail without the cost and service failures of the prior model. Asian vendor, inventory and store-fulfillment complexity threatened in-stock levels and working capital.</p><div class="lbl">Action</div><p>Led a 150-person supply chain organization (3PL management, forecasting, demand planning, purchasing, international logistics, replenishment) managing $30M in cost and $500M+ in purchases. Ran a cost analysis and outsourced supply chain functions, redesigned store pack-ship logic for a 95%+ store in-stock design, and renegotiated contracts with about 74 Asian vendors.</p><div class="lbl">Result</div><p>$5M lower annual supply chain cost, a 57% improvement in key supply chain metrics (forecast accuracy, in-stock percentage, inventory turns, delivery times), and 33% faster order fulfillment.</p></div><div class="kpis"><div class="kpi"><b>$5M</b>annual cost out</div><div class="kpi"><b>57%</b>key SC metric lift</div><div class="kpi"><b>33%</b>faster fulfillment</div></div></article>
+<article class="case rv"><div class="no" aria-hidden="true">03</div><h3>First fully outsourced logistics program for a wireless carrier</h3><div class="who">Leap Wireless International (Cricket) &middot; Senior Director, Operations &middot; 2011&ndash;2013</div><div class="par"><div class="lbl">Problem</div><p>A prepaid wireless carrier serving 4.6 million subscribers had logistics that could not scale economically; warehouse-to-store accuracy and forecast quality limited growth and capital efficiency.</p><div class="lbl">Action</div><p>Conceived and led the first fully outsourced logistics (4PL) program for a wireless carrier, cleaned store-level SKU and minimum-order master data for the 3PL handoff, and installed a carrier S&amp;OP rhythm (product, 4P, consensus demand).</p><div class="lbl">Result</div><p>$100M reduction in capital spending, warehouse-to-store order accuracy above 99%, and forecast accuracy above 75%.</p></div><div class="kpis"><div class="kpi"><b>$100M</b>capital spending cut</div><div class="kpi"><b>&gt;99%</b>warehouse-to-store accuracy</div><div class="kpi"><b>&gt;75%</b>forecast accuracy</div></div></article>
 </div>
-
-<div class="case">
-<h3>First fully outsourced logistics program for a wireless carrier</h3>
-<div class="who">Leap Wireless International (Cricket) &middot; Senior Director, Operations &middot; 2011&ndash;2013</div>
-<p><span class="lbl">Problem</span> A prepaid wireless carrier serving 4.6 million subscribers had logistics that could not scale economically; warehouse-to-store accuracy and forecast quality limited growth and capital efficiency.</p>
-<p><span class="lbl">Action</span> Conceived and led the first fully outsourced logistics (4PL) program for a wireless carrier, cleaned store-level SKU and minimum-order master data for the 3PL handoff, and installed a carrier S&amp;OP rhythm (product, 4P, consensus demand).</p>
-<p><span class="lbl">Result</span> $100M reduction in capital spending, warehouse-to-store order accuracy above 99%, and forecast accuracy above 75%.</p>
-<div class="kpis"><span class="kpi"><b>$100M</b>capital spending cut</span><span class="kpi"><b>&gt;99%</b>warehouse-to-store accuracy</span><span class="kpi"><b>&gt;75%</b>forecast accuracy</span></div>
-</div>
-</section>
-
-<section id="current">
-<h2>Current work: KNOWiNK (2025&ndash;present)</h2>
-<div class="who" style="color:#4a6a91;font-weight:600">Transformation Lead, Voter Registration System Implementation &middot; KNOWiNK (contract) &middot; Mar 2025&ndash;present</div>
-<ul>
-<li>Lead a large-scale election operations office&rsquo;s move to the TotalVote voter registration platform, on track and on budget for summer 2027 go-live.</li>
-<li>Introduced a Kotter/ADKAR change management model, the first of its kind at a jurisdiction of this scale, with improvements across all measures over time.</li>
-<li>Implemented Election Lens, a first-of-its-kind real-time dashboard that improves visibility and operational efficiency across voter turnout, mail ballot tracking and polling place readiness.</li>
-<li>Modernized Election Worker Management with a new interface, map views of judges and polling places for assignments, smarter scheduling, email and SMS notifications, automated training assignments and an integrated public-facing portal.</li>
-</ul>
-</section>
-
-<section id="expertise">
-<h2>What I do</h2>
-<div>Business transformation &middot; Supply chain management &middot; S&amp;OP &middot; NetSuite ERP &middot; Program and change management (Kotter/ADKAR) &middot; Sourcing, logistics and procurement &middot; PE portfolio operations &middot; Sales operations &middot; Six Sigma and process excellence &middot; Kyriba &middot; HubSpot CRM</div>
-</section>
-
-<section id="experience">
-<h2>Experience</h2>
-
-<div class="job">
-<div class="co">KNOWiNK (Contract) <span class="dt">&middot; Mar 2025 &ndash; Present</span></div>
-<div class="t">Transformation Lead, Voter Registration System Implementation</div>
+</div></section>
+<section class="s dark" id="current"><div class="wrap">
+<p class="kicker rv">02</p><h2 class="t rv">Current work: KNOWiNK (2025&ndash;present)</h2>
+<div class="who rv">Transformation Lead, Voter Registration System Implementation &middot; KNOWiNK (contract) &middot; Mar 2025&ndash;present</div>
+<ul class="bullets"><li class="rv">Lead a large-scale election operations office&rsquo;s move to the TotalVote voter registration platform, on track and on budget for summer 2027 go-live.</li><li class="rv">Introduced a Kotter/ADKAR change management model, the first of its kind at a jurisdiction of this scale, with improvements across all measures over time.</li><li class="rv">Implemented Election Lens, a first-of-its-kind real-time dashboard that improves visibility and operational efficiency across voter turnout, mail ballot tracking and polling place readiness.</li><li class="rv">Modernized Election Worker Management with a new interface, map views of judges and polling places for assignments, smarter scheduling, email and SMS notifications, automated training assignments and an integrated public-facing portal.</li></ul>
+</div></section>
+<section class="s" id="expertise" style="padding-bottom:0"><div class="wrap">
+<p class="kicker rv">03</p><h2 class="t rv">What I do</h2>
+<div class="tags rv"><span class="tag">Business transformation</span><span class="tag">Supply chain management</span><span class="tag">S&amp;OP</span><span class="tag">NetSuite ERP</span><span class="tag">Program and change management (Kotter/ADKAR)</span><span class="tag">Sourcing, logistics and procurement</span><span class="tag">PE portfolio operations</span><span class="tag">Sales operations</span><span class="tag">Six Sigma and process excellence</span><span class="tag">Kyriba</span><span class="tag">HubSpot CRM</span></div>
+</div></section>
+<section class="s" id="experience"><div class="wrap">
+<p class="kicker rv">04</p><h2 class="t rv">Experience</h2>
+<ol class="tl">
+<li class="rv"><div class="when"><b>Mar 2025 &ndash; Present</b></div><div class="what"><div class="co">KNOWiNK (Contract)</div>
+<div class="ttl">Transformation Lead, Voter Registration System Implementation</div>
 <div>Leading a large-scale election operations office&rsquo;s move to the TotalVote voter registration platform, on track and on budget for summer 2027 go-live. Details: see <a href="#current">Current work</a>.</div>
-</div>
-
-<div class="job">
-<div class="co">Encompass Digital (Contract) <span class="dt">&middot; Feb 2024 &ndash; Feb 2025</span></div>
-<div class="t">Transformation Lead, Business Development Partner</div>
+</div></li>
+<li class="rv"><div class="when"><b>Feb 2024 &ndash; Feb 2025</b></div><div class="what"><div class="co">Encompass Digital (Contract)</div>
+<div class="ttl">Transformation Lead, Business Development Partner</div>
 <ul>
 <li>Shaped and pitched transformation programs for ERP implementation and data privacy to prospective clients in ad tech, gaming, consumer food and mobile devices, with deal sizes of $2M&ndash;$5M.</li>
 <li>Led the transformation scope: operating-model and process design, implementation roadmaps, and executive presentations.</li>
 </ul>
-</div>
-
-<div class="job">
-<div class="co">Siprocal (Contract) <span class="dt">&middot; Miami, FL &middot; Jun 2021 &ndash; Jan 2024</span></div>
-<div class="t">Vice President, Operations</div>
+</div></li>
+<li class="rv"><div class="when"><b>Jun 2021 &ndash; Jan 2024</b>Miami, FL</div><div class="what"><div class="co">Siprocal (Contract)</div>
+<div class="ttl">Vice President, Operations</div>
 <ul>
 <li>Implemented NetSuite ERP and HubSpot CRM as a global system of record to support PE exit readiness.</li>
 <li>Launched a digital dashboard for a $40M business, giving leadership real-time forecast and KPI visibility.</li>
 <li>Cut banking reconciliation effort 50% by integrating bank partners through Kyriba.</li>
 </ul>
-</div>
-
-<div class="job">
-<div class="co">RTB Consulting Services <span class="dt">&middot; Greater Chicago Area &middot; 2016 &ndash; Jun 2021</span></div>
-<div class="t">Operations, Systems, and Finance Leader</div>
+</div></li>
+<li class="rv"><div class="when"><b>2016 &ndash; Jun 2021</b>Greater Chicago Area</div><div class="what"><div class="co">RTB Consulting Services</div>
+<div class="ttl">Operations, Systems, and Finance Leader</div>
 <div class="small">Independent consultancy. Clients included Home Depot, Mu Sigma, Foxconn, Dell, SoftBank, Sprint, Brightstar Distribution, Production Resource Group (PRG), UIC, Patina Solutions and Dean Foods.</div>
 <ul>
 <li>Drove a 30% annual profit increase by implementing a global Sales and Operations Planning (S&amp;OP) process.</li>
@@ -163,69 +217,69 @@ footer{margin-top:28px;font-size:.85rem;color:#666}
 <li>Structured and executed disposition of about $2.4M in excess inventory for a PE-backed automotive aftermarket manufacturer (2018).</li>
 </ul>
 <div class="eng">
-<div class="co">Engagement: Mu Sigma Inc. <span class="dt">&middot; Northbrook, IL &middot; May 2019 &ndash; May 2020</span></div>
-<div class="t">Supply Chain Practice Leader</div>
+<div class="co">Engagement: Mu Sigma Inc. <span class="small">&middot; Northbrook, IL &middot; May 2019 &ndash; May 2020</span></div>
+<div class="ttl">Supply Chain Practice Leader</div>
 <ul>
 <li>Built a Supply Chain Center of Excellence applying ML/AI to demand analytics, inventory optimization, transportation analytics, S&amp;OP and KPI dashboards.</li>
 <li>Added $10M in new-business enterprise value for a hardware-store (home-improvement retail) client across marketing, credit services and supply chain.</li>
 </ul>
 </div>
-</div>
-
-<div class="job">
-<div class="co">Standard General Private Equity <span class="dt">&middot; Dallas&ndash;Fort Worth, TX &middot; 2015 &ndash; 2016</span></div>
-<div class="t">Vice President, Supply Chain Operations</div>
+</div></li>
+<li class="rv"><div class="when"><b>2015 &ndash; 2016</b>Dallas&ndash;Fort Worth, TX</div><div class="what"><div class="co">Standard General Private Equity</div>
+<div class="ttl">Vice President, Supply Chain Operations</div>
 <ul>
 <li>Led a 150-person RadioShack supply chain team managing $30M cost and $500M+ procurement.</li>
 <li>Reduced annual supply chain costs $5M through analysis and outsourcing of supply chain functions.</li>
 <li>Improved key supply chain metrics 57% (forecast accuracy, in-stock percentage, inventory turns, delivery times).</li>
 <li>Cut order fulfillment time 33% by renegotiating contracts with approximately 74 Asian vendors.</li>
 </ul>
-</div>
-
-<div class="job">
-<div class="co">Brightstar Corp. <span class="dt">&middot; North America &middot; 2013 &ndash; 2015</span></div>
-<div class="t">Vice President, Sales and Product Operations</div>
+</div></li>
+<li class="rv"><div class="when"><b>2013 &ndash; 2015</b>North America</div><div class="what"><div class="co">Brightstar Corp.</div>
+<div class="ttl">Vice President, Sales and Product Operations</div>
 <ul>
 <li>Built and managed sales operations for a multibillion-dollar wireless distributor spanning order management, call center, retail operations and dealer support.</li>
 <li>Increased customer satisfaction 40% by standing up a customer-facing sales operations function.</li>
 <li>Reached 85% employee satisfaction through the Character Quest leadership identification and mentoring program.</li>
 </ul>
-</div>
-
-<div class="job">
-<div class="co">Leap Wireless International (Cricket) <span class="dt">&middot; Denver, CO &middot; 2011 &ndash; 2013</span></div>
-<div class="t">Senior Director, Operations</div>
+</div></li>
+<li class="rv"><div class="when"><b>2011 &ndash; 2013</b>Denver, CO</div><div class="what"><div class="co">Leap Wireless International (Cricket)</div>
+<div class="ttl">Senior Director, Operations</div>
 <ul>
 <li>Generated $122M in annual savings through an employee idea-driven cost program with board-level visibility.</li>
 <li>Reduced capital spending $100M by launching the first fully outsourced logistics program for a wireless carrier.</li>
 <li>Drove $30M EBITDA impact by lifting supply chain metrics to world-class levels.</li>
 </ul>
-</div>
-
-<div class="job">
-<div class="co">Earlier</div>
+</div></li>
+<li class="rv"><div class="when"></div><div class="what"><div class="co">Earlier</div>
 <div>Dell, Director of North America Operations ($10B online and retail operation) &middot; Motorola, Six Sigma Master Black Belt, Global Sales</div>
+</div></li>
+</ol>
+</div></section>
+<section class="s" id="education" style="padding-top:0"><div class="wrap">
+<p class="kicker rv">05</p><h2 class="t rv">Education and certification</h2>
+<div class="edu"><div class="rv">University of Notre Dame, Mendoza College of Business &middot; MBA</div><div class="rv">University of Illinois Chicago (UIC) &middot; B.S., Finance</div><div class="rv">Six Sigma Master Black Belt (Motorola certified)</div></div>
+</div></section>
+<section class="s contact" id="contact"><div class="wrap">
+<h2 class="t rv">Let's talk</h2>
+<p class="rv">Hiring for a VP Operations or supply chain leader, an interim or fractional COO, or a PE operating project? I'd welcome a conversation.</p>
+<div class="cta rv">
+<a class="btn btn-gold" href="mailto:tim.brunke@me.com?subject=Hello%20Tim">Contact Tim</a>
+<a class="btn btn-line" href="Tim_Brunke_Resume.pdf" download>Resume (PDF)</a>
+<a class="btn btn-line" href="Tim_Brunke_Project_Summaries.pdf" download>Project summaries (PDF)</a>
+<a class="btn btn-line" href="https://www.linkedin.com/in/timbrunke/">LinkedIn</a>
 </div>
-</section>
-
-<section id="education">
-<h2>Education and certification</h2>
-<div>University of Notre Dame, Mendoza College of Business &middot; MBA</div>
-<div>University of Illinois Chicago (UIC) &middot; B.S., Finance</div>
-<div>Six Sigma Master Black Belt (Motorola certified)</div>
-</section>
-
-<section id="contact">
-<h2>Let's talk</h2>
-<p>Hiring for a VP Operations or supply chain leader, an interim or fractional COO, or a PE operating project? I'd welcome a conversation.</p>
-<p>
-<a class="btn" href="mailto:tim.brunke@me.com?subject=Hello%20Tim">Contact Tim</a>
-<a class="btn alt" href="Tim_Brunke_Resume.pdf" download>Resume (PDF)</a>
-<a class="btn alt" href="Tim_Brunke_Project_Summaries.pdf" download>Project summaries (PDF)</a>
-<a class="btn alt" href="https://www.linkedin.com/in/timbrunke/">LinkedIn</a>
-</p>
-</section>
-
-<footer>&copy; Tim Brunke &middot; Elmhurst, IL</footer>
-</main></body></html>
+</div></section>
+</main>
+<footer><div class="wrap">&copy; Tim Brunke &middot; Elmhurst, IL</div></footer>
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var nav=document.querySelector('.nav');
+ function s(){nav.classList.toggle('scrolled',window.scrollY>8)} s(); window.addEventListener('scroll',s,{passive:true});
+ var els=document.querySelectorAll('.rv');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -6% 0px'});
+ els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body></html>
